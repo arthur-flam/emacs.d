@@ -32,9 +32,16 @@
       (use-presentation-theme)
     (use-default-theme)))
 
-(global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
+;; (global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
+;; make the fringe stand out from the background
+;;(setq solarized-distinct-fringe-background t)
+;;(setq solarized-high-contrast-mode-line t)
+(setq solarized-use-more-italic t)
 
-(use-default-theme)
+(set-frame-parameter nil 'background-mode 'dark)
+(set-terminal-parameter nil 'background-mode 'dark)
+(load-theme 'solarized)
+;;(use-default-theme)
 
 ;; Don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
