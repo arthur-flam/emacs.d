@@ -1,3 +1,39 @@
+
+
+;; PYTHON SETUP
+;; M-x jedi:install-server RET
+;; have a notebook running
+(add-hook 'python-mode-hook
+          'jedi:setup)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (define-key python-mode-map "'" 'skeleton-pair-insert-maybe)
+            )
+          )
+
+(global-set-key "(" 'skeleton-pair-insert-maybe)
+(global-set-key "[" 'skeleton-pair-insert-maybe)
+(global-set-key "{" 'skeleton-pair-insert-maybe)
+(global-set-key "\"" 'skeleton-pair-insert-maybe)
+
+(autoload 'ein "ein")
+(setq jedi:complete-on-dot t)                 ; optional
+
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i")
+;; easy_install readline
+
+;;(require 'flycheck-pyflakes)
+;;(add-hook 'python-mode-hook 'flycheck-mode)
+;;(add-to-list 'flycheck-disabled-checkers 'python-pylint)
+;;(add-to-list 'flycheck-disabled-checkers 'python-flake8)
+
+;; JAVA
+;; https://github.com/senny/emacs-eclim
+;;(autoload 'jdee-mode "jdee" "JDEE mode" t)
+;;(setq auto-mode-alist
+;;      (append '(("\\.java\\'" . jdee-mode)) auto-mode-alist))
+
 (autoload 'web-mode "web-mode")
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))

@@ -33,14 +33,20 @@
     (use-default-theme)))
 
 ;; (global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
-;; make the fringe stand out from the background
-;;(setq solarized-distinct-fringe-background t)
-;;(setq solarized-high-contrast-mode-line t)
-(setq solarized-use-more-italic t)
 
+(load-theme 'solarized)
+;;(setq solarized-broken-srgb t)
 (set-frame-parameter nil 'background-mode 'dark)
 (set-terminal-parameter nil 'background-mode 'dark)
-(load-theme 'solarized)
+
+
+
+;;(load-theme 'solarized-dark)
+(setq solarized-use-more-italic t)
+;;(setq solarized-distinct-fringe-background t)
+;;(setq solarized-high-contrast-mode-line t)
+
+
 ;;(use-default-theme)
 
 ;; Don't defer screen updates when performing operations
@@ -87,5 +93,6 @@
 
 (rename-modeline "js2-mode" js2-mode "JS2")
 (rename-modeline "clojure-mode" clojure-mode "Clj")
+
 
 (provide 'appearance)

@@ -2,6 +2,11 @@ history
 .places
 places
 recentf
+ac-comphist.dat
+savehist
+eproject.lst
+semanticdb/
+.python-environments/
 
 # Created by https://www.gitignore.io/api/osx,emacs,windows,linux
 
